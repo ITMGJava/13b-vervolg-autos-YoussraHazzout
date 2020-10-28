@@ -12,31 +12,32 @@ public class Auto {
 
         // Auto 1 Toyota
         Auto auto = new Auto("Toyota");
-        System.out.println("Toyota");
+        System.out.println(auto.getMerk());
         System.out.println("——————————");
         System.out.println("Snelheid: " + auto.getSnelheid() + "km/hr");
-        System.out.println("Kilometerstand:" + auto.getKilometerstand() + "km/hr");
+        System.out.println("Kilometerstand:" + auto.getKilometerstand() + "km");
         System.out.println();
 
         // Auto 2 Tesla
         Auto Tesla = new Auto("Tesla");
-        System.out.println("Tesla");
+        System.out.println(Tesla.getMerk());
         System.out.println("——————————");
         System.out.println("Snelheid: " + Tesla.getSnelheid() + "km/hr");
-        System.out.println("Kilometerstand: " + Tesla.getKilometerstand() + "km/hr");
+        System.out.println("Kilometerstand: " + Tesla.getKilometerstand() + "km");
         System.out.println();
 
         //Auto 3 BMW
         Auto BMW = new Auto(20000, 0, "BMW");
-        System.out.println("BMW");
+        System.out.println(BMW.getMerk());
         System.out.println("——————————");
         System.out.println("Snelheid: " + BMW.getSnelheid() + "km/hr");
-        System.out.println("Kilometerstand: " + BMW.getKilometerstand() + "km/hr");
+        System.out.println("Kilometerstand: " + BMW.getKilometerstand() + "km");
         System.out.println();
         System.out.println("Motor gegevens");
         System.out.println(auto.motorgegevens());
     }
 
+    // Motor
     public static String motorgegevens() {
         String motorMerk = "Colombo V12";
         System.out.println("De merk van de motor is: " + motorMerk);
@@ -52,11 +53,13 @@ public class Auto {
     // Constructor methode
     public Auto(String merk) {
         snelheid = 0;
-        merk = "Toyota"; // dit werkt niet?
+        //merk = "Toyota"; dit werkt niet, kwam wel door hard input en merk2x was.
+        this.merk =merk;
         kilometerstand = 20000;
     }
 
     public Auto(int kilometerstand, int snelheid, String merk) {
+        this.merk =merk;
     }
 
     // Getter KM stand
@@ -85,3 +88,4 @@ public class Auto {
 
 
 }
+
